@@ -1,6 +1,3 @@
-## Hi there 👋
-
-
 **DogukanKundum/dogukankundum** is a ✨ personel ✨ repository because its `README.md` appears on your GitHub profile.
 
 Here are some ideas to get you started:
