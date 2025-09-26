@@ -410,12 +410,12 @@ My passion for technology and versatile skills allow me to make lasting contribu
 <p>Ziyaretçi Sayısı: <span id="visits"></span></p>
 
 <script>
-  fetch('https://api.countapi.xyz/hit/dogukankundum.github.io/visits')
+  fetch('https://api.countapi.xyz/update/dogukankundum.github.io/visits/?amount=1')
     .then(res => res.json())
     .then(res => {
       document.getElementById('visits').innerText = res.value;
     });
-</script>    <div class="container container-narrow">
+</script>
       © <span id="y"></span> Doğukan Kündüm — Built with Bootstrap 5.
     </div>
   </footer>
