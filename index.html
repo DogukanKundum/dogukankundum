@@ -407,31 +407,9 @@ My passion for technology and versatile skills allow me to make lasting contribu
   </section>
 
   <footer class="py-4 border-top border-secondary-subtle small text-center text-white-50">
-<p>Ziyaretçi Sayısı: <span id="visits"></span></p>
-
-<script>
-// önce sayaç var mı diye kontrol et, yoksa oluştur
-fetch('https://api.countapi.xyz/get/dogukankundum.github.io/visits')
-  .then(res => res.json())
-  .then(res => {
-    if (res.status === 404) {
-      // sayaç yoksa sıfırdan başlat
-      fetch('https://api.countapi.xyz/create?namespace=dogukankundum.github.io&key=visits&value=0')
-        .then(() => updateCounter());
-    } else {
-      updateCounter();
-    }
-  });
-
-function updateCounter() {
-  fetch('https://api.countapi.xyz/update/dogukankundum.github.io/visits/?amount=1')
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById('visits').innerText = res.value;
-    });
-}
-</script>
-      © <span id="y"></span> Doğukan Kündüm — Built with Bootstrap 5.
+ <a href='https://www.free-counters.org/'>Free-Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=64c6f366f7c09a81f875b6615bc1bfbb37929bd5'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1397299/t/2"></script>      
+© <span id="y"></span> Doğukan Kündüm — Built with Bootstrap 5.
     </div>
   </footer>
 
