@@ -407,11 +407,41 @@ My passion for technology and versatile skills allow me to make lasting contribu
   </section>
 
   <footer class="py-4 border-top border-secondary-subtle small text-center text-white-50">
- <a href='https://www.free-counters.org/'>Free-Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=64c6f366f7c09a81f875b6615bc1bfbb37929bd5'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1397299/t/2"></script>      
-© <span id="y"></span> Doğukan Kündüm — Built with Bootstrap 5.
-    </div>
-  </footer>
+  <div>
+    👋 Visitors: <span id="visitorCounter" class="fw-bold">0</span>
+  </div>
+  <div class="mt-2">
+    © <span id="y"></span> Doğukan Kündüm — Built with Bootstrap 5.
+  </div>
+
+  <!-- Free Counter Script (gizli) -->
+  <div style="display:none;">
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=64c6f366f7c09a81f875b6615bc1bfbb37929bd5"></script>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1397299/t/2"></script>
+  </div>
+
+  <!-- Yıl ve Sayaç -->
+  <script>
+    // Yılı otomatik yaz
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // FreeCounter iframe çıktısını yakala
+    window.addEventListener("load", () => {
+      const iframe = document.querySelector("iframe[src*='freevisitorcounters']");
+      if (iframe) {
+        iframe.addEventListener("load", () => {
+          try {
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const num = doc.body.innerText.trim();
+            if (num) document.getElementById("visitorCounter").textContent = num;
+          } catch (e) {
+            console.warn("Sayaç okunamadı:", e);
+          }
+        });
+      }
+    });
+  </script>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
